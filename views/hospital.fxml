@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Pos?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="Controller.HospitalFXMLController">
+    <children>
+        <!-- Table for displaying hospital data -->
+        <TableView fx:id="hospitalTable" layoutX="14.0" layoutY="14.0" prefHeight="400.0" prefWidth="760.0" visible="false">
+            <columns>
+                <TableColumn fx:id="hospitalIDCol" text="Hospital ID"/>
+                <TableColumn fx:id="hospitalNameCol" text="Hospital Name"/>
+                <TableColumn fx:id="hospitalLocationCol" text="Hospital Location"/>
+                <TableColumn fx:id="hospitalContactCol" text="Hospital Contact"/>
+                <TableColumn fx:id="bloodBankIDCol" text="Blood Bank ID"/>
+            </columns>
+        </TableView>
+
+        <!-- Form for adding/updating hospital -->
+        <VBox fx:id="formBox" layoutX="450.0" layoutY="440.0" spacing="10.0" alignment="CENTER" visible="false">
+            <HBox spacing="10.0">
+                <Label text="Hospital ID:"/>
+                <TextField fx:id="hospitalIDField"/>
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Hospital Name:"/>
+                <TextField fx:id="hospitalNameField"/>
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Hospital Location:"/>
+                <TextField fx:id="hospitalLocationField"/>
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Hospital Contact:"/>
+                <TextField fx:id="hospitalContactField"/>
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Blood Bank ID:"/>
+                <TextField fx:id="bloodBankIDField"/>
+            </HBox>
+
+            <!-- Buttons for the form: separate submit for add and save for update -->
+            <HBox spacing="10.0" alignment="CENTER">
+                <!-- This button is for creating a new hospital -->
+                <Button fx:id="submitHospitalButton" text="Submit Hospital" onAction="#handleAdd" visible="false"/>
+                <!-- This button is for saving changes when updating an existing record -->
+                <Button fx:id="saveChangesButton" text="Save Changes" onAction="#handleSaveChanges" visible="false"/>
+                <Button text="Cancel" onAction="#handleCancel"/>
+            </HBox>
+        </VBox>
+
+        <!-- Action buttons -->
+        <HBox layoutX="14.0" layoutY="450.0" spacing="20.0" alignment="CENTER">
+            <Button fx:id="createButton" text="Add New Hospital" onAction="#handleCreate"/>
+            <Button fx:id="updateButton" text="Update" onAction="#handleUpdate"/>
+            <Button fx:id="deleteButton" text="Delete" onAction="#handleDelete"/>
+        </HBox>
+    </children>
+</AnchorPane>

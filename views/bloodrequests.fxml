@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="Controller.BloodRequestFXMLController">
+
+    <children>
+        <!-- Table for displaying blood requests -->
+        <TableView fx:id="bloodRequestTable" layoutX="14.0" layoutY="14.0" prefHeight="400.0" prefWidth="760.0" visible="false">
+            <columns>
+                <TableColumn fx:id="requestIDCol" text="Request ID"/>
+                <TableColumn fx:id="hospitalIDCol" text="Hospital ID"/>
+                <TableColumn fx:id="bloodTypeCol" text="Blood Type"/>
+                <TableColumn fx:id="quantityCol" text="Quantity"/>
+            </columns>
+        </TableView>
+
+        <!-- Form for adding/updating blood requests -->
+        <VBox fx:id="formBox" layoutX="430.0" layoutY="420.0" spacing="8.0" alignment="CENTER" visible="false">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <HBox spacing="10.0">
+                <Label text="Request ID:"/>
+                <TextField fx:id="requestIDField"/>
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Hospital ID:"/>
+                <TextField fx:id="hospitalIDField"/>
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Blood Type:"/>
+                <TextField fx:id="bloodTypeField"/>
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Quantity:"/>
+                <TextField fx:id="quantityField"/>
+            </HBox>
+
+            <!-- Buttons for the form -->
+            <HBox spacing="12.0" alignment="CENTER">
+                <Button fx:id="submitRequestButton" text="Submit Request" onAction="#handleAdd" visible="false"/>
+                <Button fx:id="saveChangesButton" text="Save Changes" onAction="#handleSaveChanges" visible="false"/>
+                <Button text="Cancel" onAction="#handleCancel"/>
+            </HBox>
+        </VBox>
+
+        <!-- Action buttons for Blood Requests -->
+        <HBox layoutX="14.0" layoutY="450.0" spacing="20.0" alignment="CENTER">
+            <Button fx:id="createRequestButton" text="Add New Blood Request" onAction="#handleCreate"/>
+            <Button fx:id="updateRequestButton" text="Update" onAction="#handleUpdate"/>
+            <Button fx:id="deleteRequestButton" text="Delete" onAction="#handleDelete"/>
+        </HBox>
+    </children>
+</AnchorPane>

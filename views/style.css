@@ -1,0 +1,204 @@
+/* General Styling */
+* {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 14px;
+    -fx-base: #f4f7fc;
+}
+
+/* Background */
+.background {
+    -fx-background-color: linear-gradient(to bottom right, #ff5858, #f09819);
+}
+
+/* Login Container */
+.login-box {
+    -fx-padding: 30;
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 4);
+}
+
+/* Title */
+.title {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+/* Input Fields */
+.text-field {
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+    -fx-background-color: rgba(255,255,255,0.9);
+    -fx-font-size: 14px;
+}
+
+.text-field:focused {
+    -fx-border-color: #ff3c38;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10;
+}
+
+/* ComboBox */
+.combo-box {
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+    -fx-font-size: 14px;
+    -fx-background-color: rgba(255,255,255,0.9);
+}
+
+.combo-box:focused {
+    -fx-border-color: #ff3c38;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10;
+}
+
+/* Buttons */
+Button {
+    -fx-background-color: #1e88e5;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 3, 0, 0, 1);
+}
+
+Button:hover {
+    -fx-background-color: #1565c0;
+}
+
+/* Special Buttons */
+#submitHospitalButton, #saveChangesButton {
+    -fx-background-color: #388e3c;
+}
+
+#submitHospitalButton:hover, #saveChangesButton:hover {
+    -fx-background-color: #2c6e27;
+}
+
+#cancelButton {
+    -fx-background-color: #f44336;
+}
+
+#cancelButton:hover {
+    -fx-background-color: #d32f2f;
+}
+
+/* Form Styling */
+#formBox {
+    -fx-background-color: #f4f7fc;
+    -fx-border-radius: 10px;
+    -fx-padding: 15px;
+    -fx-spacing: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+}
+
+/* HBox Styling */
+#formBox HBox {
+    -fx-spacing: 12px;
+    -fx-padding: 5px 0;
+}
+
+#formBox Label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+#formBox TextField {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dcdfe4;
+    -fx-border-radius: 5px;
+    -fx-padding: 8px;
+    -fx-font-size: 13px;
+}
+
+/* Table Styling */
+#bloodRequestTable, #hospitalTable, #patientTable, #donorTable, #emergencyTable {
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #dcdfe4;
+    -fx-border-width: 1px;
+    -fx-font-size: 13px;
+    -fx-alignment: CENTER;
+}
+
+#bloodRequestTable .column-header, #hospitalTable .column-header, #patientTable .column-header, #donorTable .column-header, #emergencyTable .column-header {
+    -fx-background-color: #1e88e5;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+#bloodRequestTable .table-cell, #hospitalTable .table-cell, #patientTable .table-cell, #donorTable .table-cell, #emergencyTable .table-cell {
+    -fx-padding: 10px;
+    -fx-border-color: #dcdfe4;
+}
+
+/* Action Buttons Box */
+#actionButtons HBox, HBox {
+    -fx-spacing: 20px;
+    -fx-alignment: CENTER;
+    -fx-padding: 10px;
+}
+
+/* Donor UI */
+#donorTable {
+    -fx-background-color: #f9fbe7;
+    -fx-border-color: #aed581;
+    -fx-border-width: 1px;
+}
+
+#donorTable .column-header {
+    -fx-background-color: #388e3c;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+#donorTable .table-cell {
+    -fx-padding: 10px;
+    -fx-border-color: #e0e0e0;
+    -fx-alignment: CENTER;
+}
+
+/* Emergency Services UI */
+#emergencyTable {
+    -fx-background-color: #fff8e1;
+    -fx-border-color: #ffcc80;
+    -fx-border-width: 1px;
+}
+
+#emergencyTable .column-header {
+    -fx-background-color: #ff6f00;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+#emergencyTable .table-cell {
+    -fx-padding: 10px;
+    -fx-border-color: #ffe0b2;
+    -fx-alignment: CENTER_LEFT;
+}
+
+#emergencyTable HBox {
+    -fx-spacing: 12px;
+}
+
+/* Styles for Special Buttons */
+#createButton, #updateButton, #deleteButton, #displayAllButton {
+    -fx-background-color: #2196f3;
+}
+
+#createButton:hover, #updateButton:hover, #deleteButton:hover, #displayAllButton:hover {
+    -fx-background-color: #1976d2;
+}
+
+/* Status Messages */
+.status {
+    -fx-font-size: 14px;
+    -fx-text-fill: limegreen;
+}
+
+/* Error Label */
+.error-label {
+    -fx-text-fill: red;
+    -fx-font-size: 13px;
+}

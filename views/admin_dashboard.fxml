@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17.0.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AdminDashboardController" spacing="10" alignment="CENTER" prefWidth="300" prefHeight="400">
+    <Button fx:id="bloodBanksButton" text="Blood Banks"/>
+    <Button fx:id="bloodStockButton" text="Blood Stock"/>
+    <Button fx:id="donorsButton" text="Donors"/>
+    <Button fx:id="donationsButton" text="Donations"/>
+    <Button fx:id="patientsButton" text="Patients"/>
+    <Button fx:id="emergencyServicesButton" text="Emergency Services"/>
+    <Button fx:id="eligibilityCriteriaButton" text="Eligibility Criteria"/>
+    <Button fx:id="bloodRequestsButton" text="Blood Requests"/>
+    <Button fx:id="hospitalsButton" text="Hospitals"/>
+</VBox>

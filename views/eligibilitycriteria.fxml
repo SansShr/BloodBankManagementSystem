@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Pos?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="Controller.EligibilityCriteriaFXMLController">
+    <children>
+        <!-- Table for displaying eligibility criteria -->
+        <TableView fx:id="eligibilityTable" layoutX="20.0" layoutY="20.0" prefHeight="300.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="bloodTypeCol" text="Blood Type" prefWidth="200.0"/>
+                <TableColumn fx:id="criteriaCol" text="Criteria" prefWidth="400.0"/>
+            </columns>
+        </TableView>
+
+        <!-- HBox for the Close button -->
+        <HBox layoutX="20.0" layoutY="340.0" spacing="10.0" alignment="CENTER">
+            <Button fx:id="closeButton" text="Close" styleClass="btn-close" onAction="#handleClose"/>
+        </HBox>
+    </children>
+</AnchorPane>

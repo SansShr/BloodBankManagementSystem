@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox fx:controller="Controller.SignUpController"
+      xmlns:fx="http://javafx.com/fxml"
+      spacing="10" alignment="CENTER" prefWidth="400" prefHeight="500">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- Sign Up Form -->
+    <TextField fx:id="usernameField" promptText="Enter Username" />
+    <PasswordField fx:id="passwordField" promptText="Enter Password" />
+    <PasswordField fx:id="confirmPasswordField" promptText="Confirm Password" />
+    
+    <!-- Role Selection -->
+    <ChoiceBox fx:id="roleChoiceBox" prefWidth="200" />
+
+    <!-- Error Label -->
+    <Label fx:id="errorLabel" style="-fx-text-fill: red;"/>
+    
+    <!-- Sign Up Button -->
+    <Button text="Sign Up" onAction="#handleSignUp"/>
+</VBox>

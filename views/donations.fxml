@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Pos?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="Controller.DonationsFXMLController">
+    <children>
+        <!-- Table for displaying donation data -->
+        <TableView fx:id="donationTable" layoutX="14.0" layoutY="14.0" prefHeight="400.0" prefWidth="760.0" visible="false">
+            <columns>
+                <TableColumn fx:id="donationIDCol" text="Donation ID"/>
+                <TableColumn fx:id="donorIDCol" text="Donor ID"/>
+                <TableColumn fx:id="donationDateCol" text="Donation Date"/>
+            </columns>
+        </TableView>
+
+        <!-- Form for adding/updating donations -->
+        <VBox fx:id="donationFormBox" layoutX="450.0" layoutY="440.0" spacing="10.0" alignment="CENTER" visible="false">
+            <HBox spacing="10.0">
+                <Label text="Donation ID:"/>
+                <TextField fx:id="donationIDField"/>
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Donor ID:"/>
+                <TextField fx:id="donorIDField"/>
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Donation Date (yyyy-MM-dd):"/>
+                <TextField fx:id="donationDateField"/>
+            </HBox>
+
+            <!-- Buttons for the form: separate submit for add and save for update -->
+            <HBox spacing="10.0" alignment="CENTER">
+                <!-- This button is for creating a new donation -->
+                <Button fx:id="submitDonationButton" text="Submit Donation" onAction="#handleAdd" visible="false"/>
+                <!-- This button is for saving changes when updating an existing record -->
+                <Button fx:id="saveChangesButton" text="Save Changes" onAction="#handleSaveChanges" visible="false"/>
+                <Button text="Cancel" onAction="#handleCancel"/>
+            </HBox>
+        </VBox>
+
+        <!-- Action buttons -->
+        <HBox layoutX="14.0" layoutY="450.0" spacing="20.0" alignment="CENTER">
+            <Button fx:id="createButton" text="Add New Donation" onAction="#handleCreate"/>
+            <Button fx:id="updateButton" text="Update" onAction="#handleUpdate"/>
+            <Button fx:id="deleteButton" text="Delete" onAction="#handleDelete"/>
+        </HBox>
+    </children>
+</AnchorPane>

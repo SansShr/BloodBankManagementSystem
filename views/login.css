@@ -1,0 +1,94 @@
+/* Background */
+.background {
+    -fx-background-color: linear-gradient(to bottom right, #ff5858, #f09819);
+}
+
+/* Login Container */
+.login-box {
+    -fx-padding: 30;
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 4);
+}
+
+/* Title */
+.title {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+/* Input Fields */
+.text-field {
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+    -fx-background-color: rgba(255,255,255,0.9);
+    -fx-font-size: 14px;
+}
+
+.text-field:focused {
+    -fx-border-color: #ff3c38;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10;
+}
+
+/* ComboBox */
+.combo-box {
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+    -fx-font-size: 14px;
+    -fx-background-color: rgba(255,255,255,0.9);
+}
+
+.combo-box:focused {
+    -fx-border-color: #ff3c38;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10;
+}
+
+/* Login Button */
+.btn-login {
+    -fx-background-color: #ff3c38;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 10 20;
+    -fx-background-radius: 12;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+}
+
+.btn-login:hover {
+    -fx-background-color: #fa1e1e;
+}
+
+/* Register Button */
+.btn-register {
+    -fx-background-color: #f45d48;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-background-radius: 12;
+    -fx-cursor: hand;
+    -fx-padding: 10 25;
+}
+
+.btn-register:hover {
+    -fx-background-color: #d94335;
+}
+
+/* Labels */
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+}
+
+/* Status Message */
+.status {
+    -fx-font-size: 14px;
+    -fx-text-fill: limegreen;
+}
+
+/* Error Label */
+.error-label {
+    -fx-text-fill: red;
+    -fx-font-size: 13px;
+}

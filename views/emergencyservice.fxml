@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Pos?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="Controller.EmergencyServiceFXMLController">
+
+    <children>
+        <!-- Table for displaying emergency services -->
+        <TableView fx:id="emergencyServiceTable" layoutX="14.0" layoutY="14.0" prefHeight="400.0" prefWidth="760.0" visible="false">
+            <columns>
+                <TableColumn fx:id="serviceIDCol" text="Service ID"/>
+                <TableColumn fx:id="requestIDCol" text="Request ID"/>
+                <TableColumn fx:id="serviceDetailsCol" text="Service Details"/>
+            </columns>
+        </TableView>
+
+        <!-- Form for adding/updating emergency services -->
+        <VBox fx:id="formBox" layoutX="480.0" layoutY="440.0" spacing="10.0" alignment="CENTER" visible="false">
+            <HBox spacing="10.0">
+                <Label text="Service ID:"/>
+                <TextField fx:id="serviceIDField"/>
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Request ID:"/>
+                <TextField fx:id="requestIDField"/>
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Service Details:"/>
+                <TextField fx:id="serviceDetailsField"/>
+            </HBox>
+
+            <!-- Buttons for the form -->
+            <HBox spacing="10.0" alignment="CENTER">
+                <Button fx:id="submitServiceButton" text="Submit Service" onAction="#handleAdd" visible="false"/>
+                <Button fx:id="saveChangesButton" text="Save Changes" onAction="#handleSaveChanges" visible="false"/>
+                <Button text="Cancel" onAction="#handleCancel"/>
+            </HBox>
+        </VBox>
+
+        <!-- Action buttons for Emergency Services -->
+        <HBox layoutX="14.0" layoutY="450.0" spacing="20.0" alignment="CENTER">
+            <Button fx:id="createServiceButton" text="Add New Emergency Service" onAction="#handleCreate"/>
+            <Button fx:id="updateServiceButton" text="Update" onAction="#handleUpdate"/>
+            <Button fx:id="deleteServiceButton" text="Delete" onAction="#handleDelete"/>
+        </HBox>
+    </children>
+</AnchorPane>

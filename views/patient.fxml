@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="Controller.PatientsFXMLController">
+    <children>
+        <!-- Table for displaying patient data -->
+        <TableView fx:id="patientTable" layoutX="14.0" layoutY="14.0" prefHeight="400.0" prefWidth="760.0">
+            <columns>
+                <TableColumn fx:id="patientIDCol" text="Patient ID"/>
+                <TableColumn fx:id="firstNameCol" text="First Name"/>
+                <TableColumn fx:id="lastNameCol" text="Last Name"/>
+                <TableColumn fx:id="bloodTypeCol" text="Blood Type"/>
+                <TableColumn fx:id="ageCol" text="Age"/>
+                <TableColumn fx:id="genderCol" text="Gender"/>
+                <TableColumn fx:id="medicalHistoryCol" text="Medical History"/>
+                <TableColumn fx:id="hospitalIDCol" text="Hospital ID"/>
+            </columns>
+        </TableView>
+
+        <!-- Form for adding/updating patient -->
+        <VBox fx:id="formBox" layoutX="450.0" layoutY="440.0" spacing="10.0" alignment="CENTER" visible="false">
+            <HBox spacing="10.0">
+                <Label text="Patient ID:"/>
+                <TextField fx:id="patientIDField"/>
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="First Name:"/>
+                <TextField fx:id="firstNameField"/>
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Last Name:"/>
+                <TextField fx:id="lastNameField"/>
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Blood Type:"/>
+                <TextField fx:id="bloodTypeField"/>
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Age:"/>
+                <TextField fx:id="ageField"/>
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Gender:"/>
+                <TextField fx:id="genderField"/>
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Medical History:"/>
+                <TextField fx:id="medicalHistoryField"/>
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Hospital ID:"/>
+                <TextField fx:id="hospitalIDField"/>
+            </HBox>
+
+            <!-- Buttons for the form -->
+            <HBox spacing="10.0" alignment="CENTER">
+                <Button fx:id="submitPatientButton" text="Submit Patient" onAction="#handleAdd" visible="false"/>
+                <Button fx:id="saveChangesButton" text="Save Changes" onAction="#handleSaveChanges" visible="false"/>
+                <Button text="Cancel" onAction="#handleCancel"/>
+            </HBox>
+        </VBox>
+
+        <!-- Action buttons -->
+        <HBox layoutX="14.0" layoutY="450.0" spacing="20.0" alignment="CENTER">
+            <Button fx:id="createButton" text="Add New Patient" onAction="#handleCreate"/>
+            <Button fx:id="updateButton" text="Update" onAction="#handleUpdate"/>
+            <Button fx:id="deleteButton" text="Delete" onAction="#handleDelete"/>
+           
+
+        </HBox>
+    </children>
+</AnchorPane>

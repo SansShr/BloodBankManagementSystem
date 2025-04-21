@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="Controller.BloodStockFXMLController">
+    <children>
+
+        <!-- Table for displaying blood stock data -->
+        <TableView fx:id="bloodStockTable" layoutX="14.0" layoutY="14.0" prefHeight="400.0" prefWidth="760.0" visible="false">
+            <columns>
+                <TableColumn fx:id="stockIDCol" text="Stock ID"/>
+                <TableColumn fx:id="bloodBankIDCol" text="Blood Bank ID"/>
+                <TableColumn fx:id="bloodTypeCol" text="Blood Type"/>
+                <TableColumn fx:id="quantityCol" text="Quantity"/>
+                <TableColumn fx:id="expirationDateCol" text="Expiration Date"/>
+            </columns>
+        </TableView>
+
+        <!-- Form for adding/updating blood stock -->
+        <VBox fx:id="formBox" layoutX="420.0" layoutY="420.0" spacing="8.0" alignment="CENTER" visible="false">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <HBox spacing="10.0">
+                <Label text="Stock ID:"/>
+                <TextField fx:id="stockIDField"/>
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Blood Bank ID:"/>
+                <TextField fx:id="bloodBankIDField"/>
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Blood Type:"/>
+                <TextField fx:id="bloodTypeField"/>
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Quantity:"/>
+                <TextField fx:id="quantityField"/>
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Expiration Date (yyyy-MM-dd):"/>
+                <TextField fx:id="expirationDateField"/>
+            </HBox>
+
+            <!-- Buttons for the form -->
+            <HBox spacing="12.0" alignment="CENTER">
+                <Button fx:id="submitBloodStockButton" text="Submit Blood Stock" onAction="#handleAdd" visible="false"/>
+                <Button fx:id="saveChangesButton" text="Save Changes" onAction="#handleSaveChanges" visible="false"/>
+                <Button text="Cancel" onAction="#handleCancel"/>
+            </HBox>
+        </VBox>
+
+        <!-- Action buttons -->
+        <HBox layoutX="14.0" layoutY="450.0" spacing="20.0" alignment="CENTER">
+            <Button fx:id="createButton" text="Add New Blood Stock" onAction="#handleCreate"/>
+            <Button fx:id="updateButton" text="Update" onAction="#handleUpdate"/>
+            <Button fx:id="deleteButton" text="Delete" onAction="#handleDelete"/>
+        </HBox>
+    </children>
+</AnchorPane>

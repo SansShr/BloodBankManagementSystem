@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Pos?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="Controller.DonorFXMLController">
+    <children>
+        <!-- TableView for displaying donor data -->
+        <TableView fx:id="donorTable" layoutX="14.0" layoutY="14.0" prefHeight="400.0" prefWidth="760.0" visible="false">
+            <columns>
+                <TableColumn fx:id="donorIDCol" text="Donor ID"/>
+                <TableColumn fx:id="donorFirstNameCol" text="First Name"/>
+                <TableColumn fx:id="donorLastNameCol" text="Last Name"/>
+                <TableColumn fx:id="donorPhoneCol" text="Phone"/>
+                <TableColumn fx:id="donorBloodTypeCol" text="Blood Type"/>
+                <TableColumn fx:id="donorAgeCol" text="Age"/>
+            </columns>
+        </TableView>
+
+        <!-- Form for adding/updating donors -->
+        <VBox fx:id="formBox" layoutX="450.0" layoutY="440.0" spacing="10.0" alignment="CENTER" visible="false">
+            <HBox spacing="10.0">
+                <Label text="Donor ID:"/>
+                <TextField fx:id="donorIDField"/>
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="First Name:"/>
+                <TextField fx:id="donorFirstNameField"/>
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Last Name:"/>
+                <TextField fx:id="donorLastNameField"/>
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Phone:"/>
+                <TextField fx:id="donorPhoneField"/>
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Blood Type:"/>
+                <TextField fx:id="donorBloodTypeField"/>
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Age:"/>
+                <TextField fx:id="donorAgeField"/>
+            </HBox>
+
+            <!-- Buttons for form actions -->
+            <HBox spacing="10.0" alignment="CENTER">
+                <Button fx:id="submitDonorButton" text="Submit Donor" onAction="#handleAdd" visible="false"/>
+                <Button fx:id="saveChangesButton" text="Save Changes" onAction="#handleSaveChanges" visible="false"/>
+                <Button text="Cancel" onAction="#handleCancel"/>
+            </HBox>
+        </VBox>
+
+        <!-- CRUD Operation Buttons -->
+        <HBox layoutX="14.0" layoutY="450.0" spacing="20.0" alignment="CENTER">
+            <Button fx:id="createButton" text="Add New Donor" onAction="#handleCreate"/>
+            <Button fx:id="updateButton" text="Update" onAction="#handleUpdate"/>
+            <Button fx:id="deleteButton" text="Delete" onAction="#handleDelete"/>
+        </HBox>
+    </children>
+</AnchorPane>
